@@ -1,6 +1,10 @@
 package yadroEduPage.tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import yadroEduPage.compontnts.EduBlockPage;
 
@@ -13,6 +17,9 @@ public class EduContentTests extends TestBase {
         eduPage.openPage();
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия меню")
+    @Owner("Toss Antilles")
     @Test
     public void eduHeaderVisibleTest() {
         eduPage.elementVisible("Хэдер страницы должен быть видимым",
@@ -29,6 +36,9 @@ public class EduContentTests extends TestBase {
                         "FAQ", EduBlockPage.headerMenu);
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока промо")
+    @Owner("Toss Antilles")
     @Test
     public void eduPromoVisibleTest() {
         eduPage.elementVisible("Блок промо должен быть видимым",
@@ -39,6 +49,9 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.promoSubscription);
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока подписки")
+    @Owner("Toss Antilles")
     @Test
     public void eduSubscriptionVisibleTest() {
         eduPage.elementVisible("Блок подписки должен быть видимым",
@@ -49,6 +62,9 @@ public class EduContentTests extends TestBase {
                 EduBlockPage.promoSubscribeForm);
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока баннера")
+    @Owner("Toss Antilles")
     @Test
     public void eduBannerVisibleTest() {
         eduPage.elementVisible("Блок баннера должен быть видимым",
@@ -57,6 +73,9 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.bannerImage);
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока импульса")
+    @Owner("Toss Antilles")
     @Test
     public void eduHowWasVisibleTest() {
         eduPage.elementVisible("Блок 'Как проходит Импульс' должен быть видимым",
@@ -67,6 +86,10 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.howWasInfo);
     }
 
+
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока направлений")
+    @Owner("Toss Antilles")
     @Test
     public void eduDirectionsVisibleTest() {
         eduPage.elementVisible("Блок 'Направления' должен быть видимым",
@@ -77,6 +100,10 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.directionsCards);
     }
 
+
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока стажировки")
+    @Owner("Toss Antilles")
     @Test
     public void eduConditionsVisibleTest() {
         eduPage.elementVisible("Условия стражировки должен быть видимым",
@@ -85,6 +112,10 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.conditionsItem);
     }
 
+
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока с приглашением")
+    @Owner("Toss Antilles")
     @Test
     public void eduPurposeVisibleTest() {
         eduPage.elementVisible("Блок с приглашением должен быть видимым",
@@ -93,6 +124,9 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.purposeContent);
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока 'Как проходит стажировка'")
+    @Owner("Toss Antilles")
     @Test
     public void eduProcessingTest() {
         eduPage.elementVisible("Блок 'Как проходит стажировка' должен быть видимым",
@@ -101,6 +135,9 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.processingContent);
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока 'Мы ищем таланты'")
+    @Owner("Toss Antilles")
     @Test
     public void eduTalentsVisibleTest() {
         eduPage.elementVisible("Блок 'Мы ищем таланты' должен быть видимым",
@@ -114,6 +151,9 @@ public class EduContentTests extends TestBase {
 
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока FAQ")
+    @Owner("Toss Antilles")
     @Test
     public void eduTFAQVisibleTest() {
         eduPage.elementVisible("Блок 'FAQ' должен быть видимым",
@@ -122,9 +162,12 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.faqContent);
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия блока контактов")
+    @Owner("Toss Antilles")
     @Test
     public void eduContactsVisibleTest() {
-        eduPage.elementVisible("Блок 'FAQ' должен быть видимым",
+        eduPage.elementVisible("Блок контактов должен быть видимым",
                         EduBlockPage.contactsBlock)
                 .elementVisible("Содержимое блока должно быть видимо",
                         EduBlockPage.contactsLink)
@@ -132,6 +175,9 @@ public class EduContentTests extends TestBase {
                         EduBlockPage.contactsSubscribeForm);
     }
 
+    @Feature("Проверка наличия блоков на странице")
+    @DisplayName("Проверка наличия футера")
+    @Owner("Toss Antilles")
     @Test
     public void eduFooterVisibleTest() {
         eduPage.elementVisible("Футер должен быть видимым",

@@ -1,6 +1,9 @@
 package yadroEduPage.tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import yadroEduPage.models.SubscritionRequest;
 import yadroEduPage.models.SuccessfulSubscriptionResponse;
@@ -14,9 +17,12 @@ public class EduSubscriptionApiTests extends TestBase {
 
     //из-за SmartCaptcha тесты написаны вслепую, с проверкой ответов задизейблены, стоят костыли с проверкой ошибки
 
+    @Feature("Проверка API подписки")
+    @DisplayName("Заблокированный капчой - Проверка подписки в блоке промо")
+    @Owner("Toss Antilles")
     @Test
     @Disabled
-    public void eduPromoSubscriptionAPI() {
+    public void eduPromoSubscriptionAPIest() {
 
         SubscritionRequest subscritionRequest = new SubscritionRequest();
         subscritionRequest.setEmail("schicksalkreuzung@gmail.com");
@@ -39,9 +45,12 @@ public class EduSubscriptionApiTests extends TestBase {
         });
     }
 
+    @Feature("Проверка API подписки")
+    @DisplayName("Заблокированный капчой - Проверка подписки в блоке контактов")
+    @Owner("Toss Antilles")
     @Test
     @Disabled
-    public void eduContactsSubscriptionAPI() {
+    public void eduContactsSubscriptionAPITest() {
 
         SubscritionRequest subscritionRequest = new SubscritionRequest();
         subscritionRequest.setEmail("schicksalkreuzung@gmail.com");
@@ -64,8 +73,11 @@ public class EduSubscriptionApiTests extends TestBase {
         });
     }
 
+    @Feature("Проверка API подписки")
+    @DisplayName("Мок проверки - Проверка подписки в блоке промо")
+    @Owner("Toss Antilles")
     @Test
-    public void eduPromoSubscriptionAPIError() {
+    public void eduPromoSubscriptionAPIErrorTest() {
 
         SubscritionRequest subscritionRequest = new SubscritionRequest();
         subscritionRequest.setEmail("schicksalkreuzung@gmail.com");
@@ -82,8 +94,11 @@ public class EduSubscriptionApiTests extends TestBase {
         );
     }
 
+    @Feature("Проверка API подписки")
+    @DisplayName("Мок проверки - Проверка подписки в блоке контактов")
+    @Owner("Toss Antilles")
     @Test
-    public void eduContactsSubscriptionAPIError() {
+    public void eduContactsSubscriptionAPIErrorTest() {
 
         SubscritionRequest subscritionRequest = new SubscritionRequest();
         subscritionRequest.setEmail("schicksalkreuzung@gmail.com");

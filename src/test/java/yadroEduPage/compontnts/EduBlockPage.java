@@ -28,6 +28,10 @@ public class EduBlockPage {
         directionsBlock = $(".Directions"),
         directionsFilters = $(".Directions__filters"),
         directionsCards = $(".Cards"),
+
+        directionsCardPreview = $(".Cards").$(".Cards__card"),
+
+
         conditionsBlock = $("#conditions"),
         conditionsItem = $(".Conditions-list__item"),
         purposeBlock = $("#purpose"),
@@ -82,7 +86,7 @@ public class EduBlockPage {
         return this;
     }
 
-    public EduBlockPage buttonClick(String description, SelenideElement button){
+    public EduBlockPage elementClick(String description, SelenideElement button){
         step(description, () -> {
             button.click();
         });
